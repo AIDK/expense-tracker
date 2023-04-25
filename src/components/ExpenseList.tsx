@@ -42,10 +42,14 @@ const ExpenseList = ({ expenses, onDelete }: Props) => {
         ))}
       </tbody>
       <tfoot>
-        {/* TODO: calculate running total */}
         <tr>
           <td>Total</td>
-          <td>R0.00</td>
+          <td>
+            {/* use `reduce` function to calculate running grid total */}
+            {expenses
+              .reduce((acc, expense) => expense.amount + acc, 0)
+              .toFixed(2)}
+          </td>
           <td></td>
           <td></td>
         </tr>
