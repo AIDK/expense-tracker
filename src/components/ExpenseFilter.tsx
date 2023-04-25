@@ -11,6 +11,7 @@ const ExpenseFilter = ({ onSelectCategory }: Props) => {
       onChange={(event) => onSelectCategory(event.target.value)}
     >
       <option value="">All categories</option>
+      {/* Build options based on categories.ts */}
       {categories.map((category) => (
         <option key={category} value={category}>
           {category}
