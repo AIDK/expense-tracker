@@ -23,6 +23,7 @@ function App() {
 
   return (
     <div>
+      <h2>Form Details:</h2>
       <div className="mb-5">
         {/* we have to copy the entire expenses array so that when we add a new item we do not replace the existing items, 
         then we have to copy the new expense we adding to get it's properties and then 
@@ -33,6 +34,7 @@ function App() {
           }
         />
       </div>
+      <h2>Expenses:</h2>
       <div className="mb-3">
         <ExpenseFilter
           onSelectCategory={(category) => setSelectedCategory(category)}
