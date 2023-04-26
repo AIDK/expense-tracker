@@ -1,24 +1,21 @@
-import categories from "../categories";
+import categories from '../categories';
 
 interface Props {
-  onSelectCategory: (category: string) => void;
+	onSelectCategory: (category: string) => void;
 }
 
 const ExpenseFilter = ({ onSelectCategory }: Props) => {
-  return (
-    <select
-      className="form-select"
-      onChange={(event) => onSelectCategory(event.target.value)}
-    >
-      <option value="">All categories</option>
-      {/* Build options based on categories.ts */}
-      {categories.map((category) => (
-        <option key={category} value={category}>
-          {category}
-        </option>
-      ))}
-    </select>
-  );
+	return (
+		<select className='form-select' onChange={(event) => onSelectCategory(event.target.value)}>
+			<option value=''>All categories</option>
+			{/* Build options based on categories.ts */}
+			{categories.map((category) => (
+				<option key={category} value={category}>
+					{category}
+				</option>
+			))}
+		</select>
+	);
 };
 
 export default ExpenseFilter;
